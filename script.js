@@ -26,8 +26,15 @@ personAgeThird.innerHTML = person3.age;
 personIdThird.innerHTML = person3.personId;
 solid.innerHTML = person3.image;
 
-// parag = document.getElementsByClassName(".parag");
-parag = document.querySelector(".parag");
-parag.style.fontWeight = "bold";
+parag = document.querySelectorAll("p");
+spans = document.querySelectorAll("span");
 
-console.log(parag);
+for (let i = 0; i < parag.length; i++) {
+  let element = parag[i];
+  element.style.fontWeight = "bold";
+}
+
+for (let i = 0; i < spans.length; i++) {
+  let element = spans[i];
+  element.style.fontWeight = "lighter";
+}
